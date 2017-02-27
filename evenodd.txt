@@ -3,7 +3,9 @@
   This Java Even Odd Number Example shows how to check if the given
   number is even or odd.
 */
- 
+/*
+adding commnets to this program
+*/
 public class FindEvenOrOddNumber {
  
         public static void main(String[] args) {
