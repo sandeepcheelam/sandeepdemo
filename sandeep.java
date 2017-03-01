@@ -4,7 +4,7 @@
   number is even or odd.
 */
 /*
-adding commnets to this program
+testing the first project adding commnets to this program
 */
 public class FindEvenOrOddNumber {
  
