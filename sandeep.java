@@ -6,7 +6,7 @@
 /*
 testing the first project adding commnets to this program
 */
-public class FindEvenOrOddNumber {
+public main class FindEvenOrOddNumber {
  
         public static void main(String[] args) {
                
