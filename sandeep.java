@@ -1,46 +1,54 @@
 /*
-  Even Odd Number Example
-  This Java Even Odd Number Example shows how to check if the given
-  number is even or odd.
+        Calculate Circle Area using Java Example
+        This Calculate Circle Area using Java Example shows how to calculate
+        area of circle using it's radius.
 */
-/*
-testing the first project adding commnets to this program
-*/
-public main class FindEvenOrOddNumber {
+imported all required packages 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+ 
+public class CalculateCircleAreaExample {
  
         public static void main(String[] args) {
                
-                //create an array of 10 numbers
-                int[] numbers = new int[]{1,2,3,4,5,6,7,8,9,10};
+                int radius = 0;
+                System.out.println("Please enter radius of a circle");
                
-                for(int i=0; i < numbers.length; i++){
-                       
-                        /*
-                         * use modulus operator to check if the number is even or odd. 
-                         * If we divide any number by 2 and reminder is 0 then the number is
-                         * even, otherwise it is odd.
-                         */
-                         
-                         if(numbers[i]%2 == 0)
-                                System.out.println(numbers[i] + " is even number.");
-                         else
-                                System.out.println(numbers[i] + " is odd number.");
-                               
+                try
+                {
+                        //get the radius from console
+                        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                        radius = Integer.parseInt(br.readLine());
+                }
+                //if invalid value was entered
+                catch(NumberFormatException ne)
+                {
+                        System.out.println("Invalid radius value" + ne);
+                        System.exit(0);
+                }
+                catch(IOException ioe)
+                {
+                        System.out.println("IO Error :" + ioe);
+                        System.exit(0);
                 }
                
+                /*
+                 * Area of a circle is
+                 * pi * r * r
+                 * where r is a radius of a circle.
+                 */
+               
+                //NOTE : use Math.PI constant to get value of pi
+                double area = Math.PI * radius * radius;
+               
+                System.out.println("Area of a circle is " + area);
         }
 }
  
 /*
-Output of the program would be
-1 is odd number.
-2 is even number.
-3 is odd number.
-4 is even number.
-5 is odd number.
-6 is even number.
-7 is odd number.
-8 is even number.
-9 is odd number.
-10 is even number.
+Output of Calculate Circle Area using Java Example would be
+Please enter radius of a circle
+19
+Area of a circle is 1134.1149479459152
 */
